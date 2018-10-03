@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabPractical2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Albert Einstein Facts" SizeToContent="WidthAndHeight">
+    <Grid Margin="20,20,20,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Five facts about Albert Einstein" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" FontSize="20" FontWeight="Bold" 
+                   Name="lblHeading" Margin="10" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="2" Grid.Row="2" FontSize="14" Name="tbkTextBody" HorizontalAlignment="Left" Width="434" Margin="5" 
+                   TextAlignment="Justify" TextWrapping="Wrap">
+            <LineBreak/>
+         <Run Text="Fact 1: Einstein loved sailing, even though he wasn't very good at it"/>
+        <LineBreak/>
+        <Run Text="Fact 2: Einstein didn't wear socks because they often would get &#x0a;holes in them"/>
+            <LineBreak/>
+        <Run Text="Fact 3: Einstein co-invented a refrigirator that operated on &#x0a;compressed gases"/>
+            <LineBreak/>
+        <Run Text="Fact 4: 'Albert Einstein' is an anagram of 'Ten elite brains'"/>
+            <LineBreak/>
+        <Run Text="Fact 5: Einstein began his fascination with Science after his father &#x0a;showed him a simple pocket compass"/>
+        </TextBlock>
+        <Image Source="C:\Users\cz6l1f.NAM\Desktop\LYIT\Repos\WPFLabPractical2\EinsteinProject\LabPractical2\Images\Einstein.jpg" Grid.Column="1" Grid.Row="2" Height="200" Margin="10"/>
+        <Button Name="btnClose" Content="Close" FontWeight="Bold" Grid.Column="2" Grid.Row="3" Margin="0,10,50,0" FontSize="16" Width="150" 
+                HorizontalAlignment="right" Click="btnClose_Click"/>
     </Grid>
 </Window>

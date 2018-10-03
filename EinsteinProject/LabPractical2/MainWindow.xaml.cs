@@ -18,11 +18,21 @@ namespace LabPractical2
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
-        public MainWindow()
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
+            MessageBoxResult result = MessageBox.Show("Are you sure ?", "Please choose an option", MessageBoxButton.YesNo);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    this.Close();
+                    break;
+                case MessageBoxResult.No:
+                    MessageBox.Show("Kool! Enjoy Einstein Facts!!!", "Albert Einstein Facts");
+                    break;
+
+            }
         }
     }
 }
